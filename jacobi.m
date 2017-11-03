@@ -3,6 +3,7 @@ D = diag(diag(A));
 T = A - D;
 
 eigvec = eig(-D\T);
+% Check if my iteration would converge first.
 if norm(eigvec, inf) > 1
     error('The eigen value is greater than 1 and the method cannot converge.');
 end
