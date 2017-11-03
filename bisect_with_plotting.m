@@ -1,4 +1,5 @@
 function root = bisect_with_plotting(fun,left,right,tolerance,include_plots)
+% This is connected to Wk1_ComputerLogicLoops.m
 if include_plots
     x = linspace(left,right,1000);
     plot(x,fun(x),'linewidth',2), hold on;
