@@ -12,7 +12,7 @@ err = 1; % or err = tol +1 to guarantee it initially > tolerance
 iter = 1;
 x_out = x_init;
 while err > tol
-    x_out(:,iter+1)= -D\T*x_ini(:,iter) + D\b;
+    x_out(:,iter+1)= -D\(T*x_ini(:,iter)) + D\b;
     err = norm(x_out(:,iter+1)-x_out(:,iter),inf);
     iter = iter + 1;
 end
